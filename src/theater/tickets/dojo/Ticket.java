@@ -19,19 +19,22 @@ public class Ticket {
 	}
 
 	public Double getPreco() {
+		Double preco = this.tipo.getPreco();
 		if (this.tipo.equals(Tipo.CRIANCA)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
-				return 5.5;
+				return preco;
 			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
-				return 5.5 - (5.5 * 0.1);
+				return preco - (preco * 0.1);
 			}
 		} else if (this.tipo.equals(Tipo.ESTUDANTE)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
-				return 8.0;
+				return preco;
+			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
+				return preco - (preco * 0.1);
 			}
 		} else if (this.tipo.equals(Tipo.IDOSO)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
-				return 6.0 - (6.0 * 0.05);
+				return preco - (preco * 0.05);
 			}
 		}
 		return null;
