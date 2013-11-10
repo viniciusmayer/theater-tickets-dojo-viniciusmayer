@@ -26,4 +26,10 @@ public class TicketIdosoTest {
 		Ticket ticket = new Ticket(Tipo.IDOSO, DiaDaSemana.TERCA);
 		Assert.assertTrue(ticket.getPreco().equals(5.1));
 	}
+	
+	@Test
+	public void testQuarta() {
+		Ticket ticket = new Ticket(Tipo.IDOSO, DiaDaSemana.QUARTA);
+		Assert.assertTrue(ticket.getPreco().equals(3.6));
+	}
 }
