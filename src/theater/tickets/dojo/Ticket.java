@@ -22,27 +22,21 @@ public class Ticket {
 
 	public Double getPreco() {
 		Double preco = this.tipo.getPreco();
-		if (this.tipo.equals(Tipo.CRIANCA)){
-			if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
-				preco -=  (preco * 0.1);
-			} else if (this.diaDaSemana.equals(DiaDaSemana.TERCA)){
-				preco -= (preco * 0.15);
-			}
-		} else if (this.tipo.equals(Tipo.ESTUDANTE)){
-			if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
-				preco -= (preco * 0.1);
-			} else if (this.diaDaSemana.equals(DiaDaSemana.TERCA)){
-				preco -= (preco * 0.05);
-			}
-		} else if (this.tipo.equals(Tipo.IDOSO)){
-			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
-				preco -= (preco * 0.05);
-			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
-				preco -= (preco * 0.1);
-			} else if (this.diaDaSemana.equals(DiaDaSemana.TERCA)){
-				preco -= (preco * 0.15);
-			}
+		Double percentualDesconto = 0.0;
+		
+		switch (this.tipo) {
+		case CRIANCA:
+			percentualDesconto = this.diaDaSemana.getPercentualDescontoCrianca();
+			break;
+		case ESTUDANTE:
+			percentualDesconto = this.diaDaSemana.getPercentualDescontoEstudante();
+			break;
+		default:
+			percentualDesconto = this.diaDaSemana.getPercentualDescontoIdoso();
+			break;
 		}
+		
+		preco -=  (preco * percentualDesconto);
 		DecimalFormat decimalFormat = new DecimalFormat("###.##");
 		String precoAsString = decimalFormat.format(preco);
 		return new Double(precoAsString);
