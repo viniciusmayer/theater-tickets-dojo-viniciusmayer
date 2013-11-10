@@ -35,6 +35,8 @@ public class Ticket {
 		} else if (this.tipo.equals(Tipo.IDOSO)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
 				return preco - (preco * 0.05);
+			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
+				return preco - (preco * 0.1);
 			}
 		}
 		return null;
