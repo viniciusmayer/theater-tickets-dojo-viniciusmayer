@@ -19,7 +19,13 @@ public enum Tipo {
 		public Ticket getTicket(DiaDaSemana diaDaSemana) {
 			return new TicketIdoso(6.0, diaDaSemana);
 		}
+	},
+	PADRAO {
+		@Override
+		public Ticket getTicket(DiaDaSemana diaDaSemana) {
+			return new TicketPadrao(10.0, diaDaSemana);
+		}
 	};
-	
+
 	public abstract Ticket getTicket(DiaDaSemana diaDaSemana);
 }

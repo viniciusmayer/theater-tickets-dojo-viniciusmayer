@@ -2,19 +2,22 @@ package theater.tickets.dojo;
 
 public enum DiaDaSemana {
 
-	DOMINGO(0.0, 0.0, 0.05),
-	SEGUNDA(0.1, 0.35, 0.1),
-	TERCA(0.15, 0.35, 0.15),
-	QUARTA(0.3, 0.35, 0.4),
-	QUINTA(0.0, 0.35, 0.3),
-	SEXTA(0.11, 0.35, 0.0),
-	SABADO(0.0, 0.0, 0.05);
+	DOMINGO(0.0, 0.0, 0.05, 0.0),
+	SEGUNDA(0.1, 0.35, 0.1, 0.0),
+	TERCA(0.15, 0.35, 0.15, 0.0),
+	QUARTA(0.3, 0.35, 0.4, 0.0),
+	QUINTA(0.0, 0.35, 0.3, 0.0),
+	SEXTA(0.11, 0.35, 0.0, 0.0),
+	SABADO(0.0, 0.0, 0.05, 0.0),
+	FERIADO(0.0, 0.0, 0.05, 0.0);
 
 	private Double percentualDescontoCrianca;
 	private Double percentualDescontoEstudante;
 	private Double percentualDescontoIdoso;
+	private Double percentualDescontoPadrao;
 
-	private DiaDaSemana(Double percentualDescontoCrianca, Double percentualDescontoEstudante, Double percentualDescontoIdoso) {
+	private DiaDaSemana(Double percentualDescontoCrianca, Double percentualDescontoEstudante, Double percentualDescontoIdoso,
+			Double percentualDescontoPadrao) {
 		this.percentualDescontoCrianca = percentualDescontoCrianca;
 		this.percentualDescontoEstudante = percentualDescontoEstudante;
 		this.percentualDescontoIdoso = percentualDescontoIdoso;
@@ -32,4 +35,7 @@ public enum DiaDaSemana {
 		return percentualDescontoIdoso;
 	}
 
+	public Double getPercentualDescontoPadrao() {
+		return percentualDescontoPadrao;
+	}
 }

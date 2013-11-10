@@ -10,11 +10,11 @@ import theater.tickets.dojo.Tipo;
 public class TicketEstudanteTest {
 
 	@Test
-	public void testDomingo(){
+	public void testDomingo() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.DOMINGO);
 		Assert.assertTrue(ticket.getPreco().equals(8.0));
 	}
-	
+
 	@Test
 	public void testSegunda() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.SEGUNDA);
@@ -48,6 +48,12 @@ public class TicketEstudanteTest {
 	@Test
 	public void testSabado() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.SABADO);
+		Assert.assertTrue(ticket.getPreco().equals(8.0));
+	}
+
+	@Test
+	public void testFeriado() {
+		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.FERIADO);
 		Assert.assertTrue(ticket.getPreco().equals(8.0));
 	}
 }

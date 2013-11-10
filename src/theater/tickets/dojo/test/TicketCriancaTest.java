@@ -50,4 +50,10 @@ public class TicketCriancaTest {
 		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.SABADO);
 		Assert.assertTrue(ticket.getPreco().equals(5.5));
 	}
+
+	@Test
+	public void testFeriado() {
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.FERIADO);
+		Assert.assertTrue(ticket.getPreco().equals(5.5));
+	}
 }

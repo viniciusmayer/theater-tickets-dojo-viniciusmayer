@@ -1,6 +1,5 @@
 package theater.tickets.dojo;
 
-
 public class TicketCrianca extends Ticket {
 
 	public TicketCrianca(Double preco, DiaDaSemana diaDaSemana) {
@@ -10,7 +9,6 @@ public class TicketCrianca extends Ticket {
 	@Override
 	public Double getPercentualDesconto() {
 		return this.getDiaDaSemana().getPercentualDescontoCrianca();
-
 	}
 
 }

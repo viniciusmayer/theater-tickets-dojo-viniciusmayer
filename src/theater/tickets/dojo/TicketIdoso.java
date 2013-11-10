@@ -1,6 +1,5 @@
 package theater.tickets.dojo;
 
-
 public class TicketIdoso extends Ticket {
 
 	public TicketIdoso(Double preco, DiaDaSemana diaDaSemana) {
