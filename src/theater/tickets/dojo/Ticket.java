@@ -39,6 +39,8 @@ public class Ticket {
 				preco -= (preco * 0.05);
 			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
 				preco -= (preco * 0.1);
+			} else if (this.diaDaSemana.equals(DiaDaSemana.TERCA)){
+				preco -= (preco * 0.15);
 			}
 		}
 		DecimalFormat decimalFormat = new DecimalFormat("###.##");
