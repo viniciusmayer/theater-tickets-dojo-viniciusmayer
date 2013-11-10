@@ -15,3 +15,6 @@ algumas observações "finais" (após implementação):
 * não implementei nenhum tratamento para o caso de não ser criança, estudante ou idoso. seria necessário realizar validação deste item.
 * a especificação deixa em aberto a questão do estudante com/sem carteirinha. optei por: estudante só é estudante mediante apresentação da
 carteirinha. seria necessário realizar validação deste item.
+
+observação "atrasada":
+* não implementei nenhum tratamento para feriado.
