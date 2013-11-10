@@ -31,6 +31,8 @@ public class Ticket {
 		} else if (this.tipo.equals(Tipo.ESTUDANTE)){
 			if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
 				preco -= (preco * 0.1);
+			} else if (this.diaDaSemana.equals(DiaDaSemana.TERCA)){
+				preco -= (preco * 0.05);
 			}
 		} else if (this.tipo.equals(Tipo.IDOSO)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
