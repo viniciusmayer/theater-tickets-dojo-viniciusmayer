@@ -15,4 +15,10 @@ public class TicketTest {
 		Assert.assertTrue(ticket.getPreco().equals(5.5));
 	}
 
+	@Test
+	public void testEstudanteDomingo(){
+		Ticket ticket = new Ticket(Tipo.ESTUDANTE, DiaDaSemana.DOMINGO);
+		Assert.assertTrue(ticket.getPreco().equals(8.0));
+	}
+	
 }

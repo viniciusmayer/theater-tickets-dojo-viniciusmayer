@@ -23,6 +23,10 @@ public class Ticket {
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
 				return 5.5;
 			}
+		} else if (this.tipo.equals(Tipo.ESTUDANTE)){
+			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
+				return 8.0;
+			}
 		}
 		return null;
 	}
