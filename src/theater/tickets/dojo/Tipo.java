@@ -2,17 +2,24 @@ package theater.tickets.dojo;
 
 public enum Tipo {
 
-	CRIANCA(5.5),
-	ESTUDANTE(8.0),
-	IDOSO(6.0);
+	CRIANCA {
+		@Override
+		public Ticket getTicket(DiaDaSemana diaDaSemana) {
+			return new TicketCrianca(5.5, diaDaSemana);
+		}
+	},
+	ESTUDANTE {
+		@Override
+		public Ticket getTicket(DiaDaSemana diaDaSemana) {
+			return new TicketEstudante(8.0, diaDaSemana);
+		}
+	},
+	IDOSO {
+		@Override
+		public Ticket getTicket(DiaDaSemana diaDaSemana) {
+			return new TicketIdoso(6.0, diaDaSemana);
+		}
+	};
 	
-	private Double preco;
-
-	private Tipo(Double preco) {
-		this.preco = preco;
-	}
-
-	public Double getPreco() {
-		return preco;
-	}
+	public abstract Ticket getTicket(DiaDaSemana diaDaSemana);
 }
