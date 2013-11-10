@@ -1,5 +1,7 @@
 package theater.tickets.dojo;
 
+import java.text.DecimalFormat;
+
 
 public abstract class Ticket {
 
@@ -19,6 +21,16 @@ public abstract class Ticket {
 		return precoOriginal;
 	}
 
-	public abstract Double getPreco();
+	public Double getPreco(){
+		Double preco = this.getPrecoOriginal();
+		Double percentualDesconto = 0.0;
+		percentualDesconto = this.getPercentualDesconto();
+		preco -=  (preco * percentualDesconto);
+		DecimalFormat decimalFormat = new DecimalFormat("###.##");
+		String precoAsString = decimalFormat.format(preco);
+		return new Double(precoAsString);
+	}
+	
+	public abstract Double getPercentualDesconto();
 	
 }
