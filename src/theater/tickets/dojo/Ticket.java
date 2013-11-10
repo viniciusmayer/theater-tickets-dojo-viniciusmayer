@@ -1,5 +1,7 @@
 package theater.tickets.dojo;
 
+import java.text.DecimalFormat;
+
 public class Ticket {
 
 	private Tipo tipo;
@@ -21,25 +23,25 @@ public class Ticket {
 	public Double getPreco() {
 		Double preco = this.tipo.getPreco();
 		if (this.tipo.equals(Tipo.CRIANCA)){
-			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
-				return preco;
-			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
-				return preco - (preco * 0.1);
+			if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
+				preco -=  (preco * 0.1);
+			} else if (this.diaDaSemana.equals(DiaDaSemana.TERCA)){
+				preco -= (preco * 0.15);
 			}
 		} else if (this.tipo.equals(Tipo.ESTUDANTE)){
-			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
-				return preco;
-			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
-				return preco - (preco * 0.1);
+			if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
+				preco -= (preco * 0.1);
 			}
 		} else if (this.tipo.equals(Tipo.IDOSO)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
-				return preco - (preco * 0.05);
+				preco -= (preco * 0.05);
 			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
-				return preco - (preco * 0.1);
+				preco -= (preco * 0.1);
 			}
 		}
-		return null;
+		DecimalFormat decimalFormat = new DecimalFormat("###.##");
+		String precoAsString = decimalFormat.format(preco);
+		return new Double(precoAsString);
 	}
 
 }
