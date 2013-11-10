@@ -32,4 +32,22 @@ public class TicketEstudanteTest {
 		Ticket ticket = new Ticket(Tipo.ESTUDANTE, DiaDaSemana.QUARTA);
 		Assert.assertTrue(ticket.getPreco().equals(4.0));
 	}
+
+	@Test
+	public void testQuinta() {
+		Ticket ticket = new Ticket(Tipo.ESTUDANTE, DiaDaSemana.QUINTA);
+		Assert.assertTrue(ticket.getPreco().equals(5.6));
+	}
+
+	@Test
+	public void testSexta() {
+		Ticket ticket = new Ticket(Tipo.ESTUDANTE, DiaDaSemana.SEXTA);
+		Assert.assertTrue(ticket.getPreco().equals(8.0));
+	}
+
+	@Test
+	public void testSabado() {
+		Ticket ticket = new Ticket(Tipo.ESTUDANTE, DiaDaSemana.SABADO);
+		Assert.assertTrue(ticket.getPreco().equals(8.0));
+	}
 }
