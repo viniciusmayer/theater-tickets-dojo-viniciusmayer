@@ -22,10 +22,16 @@ public class Ticket {
 		if (this.tipo.equals(Tipo.CRIANCA)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
 				return 5.5;
+			} else if (this.diaDaSemana.equals(DiaDaSemana.SEGUNDA)){
+				return 5.5 - (5.5 * 0.1);
 			}
 		} else if (this.tipo.equals(Tipo.ESTUDANTE)){
 			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
 				return 8.0;
+			}
+		} else if (this.tipo.equals(Tipo.IDOSO)){
+			if (this.diaDaSemana.equals(DiaDaSemana.DOMINGO)){
+				return 6.0 - (6.0 * 0.05);
 			}
 		}
 		return null;
