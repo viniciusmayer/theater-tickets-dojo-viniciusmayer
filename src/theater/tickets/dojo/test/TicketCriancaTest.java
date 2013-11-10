@@ -11,43 +11,43 @@ public class TicketCriancaTest {
 
 	@Test
 	public void testDomingo() {
-		Ticket ticket = new Ticket(Tipo.CRIANCA, DiaDaSemana.DOMINGO);
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.DOMINGO);
 		Assert.assertTrue(ticket.getPreco().equals(5.5));
 	}
 
 	@Test
 	public void testSegunda() {
-		Ticket ticket = new Ticket(Tipo.CRIANCA, DiaDaSemana.SEGUNDA);
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.SEGUNDA);
 		Assert.assertTrue(ticket.getPreco().equals(4.95));
 	}
 
 	@Test
 	public void testTerca() {
-		Ticket ticket = new Ticket(Tipo.CRIANCA, DiaDaSemana.TERCA);
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.TERCA);
 		Assert.assertTrue(ticket.getPreco().equals(4.68));
 	}
 
 	@Test
 	public void testQuarta() {
-		Ticket ticket = new Ticket(Tipo.CRIANCA, DiaDaSemana.QUARTA);
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.QUARTA);
 		Assert.assertTrue(ticket.getPreco().equals(3.85));
 	}
 
 	@Test
 	public void testQuinta() {
-		Ticket ticket = new Ticket(Tipo.CRIANCA, DiaDaSemana.QUINTA);
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.QUINTA);
 		Assert.assertTrue(ticket.getPreco().equals(5.5));
 	}
 
 	@Test
 	public void testSexta() {
-		Ticket ticket = new Ticket(Tipo.CRIANCA, DiaDaSemana.SEXTA);
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.SEXTA);
 		Assert.assertTrue(ticket.getPreco().equals(4.9));
 	}
 
 	@Test
 	public void testSabado() {
-		Ticket ticket = new Ticket(Tipo.CRIANCA, DiaDaSemana.SABADO);
+		Ticket ticket = Tipo.CRIANCA.getTicket(DiaDaSemana.SABADO);
 		Assert.assertTrue(ticket.getPreco().equals(5.5));
 	}
 }
