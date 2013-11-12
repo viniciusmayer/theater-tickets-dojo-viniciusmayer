@@ -4,12 +4,10 @@ import java.text.DecimalFormat;
 
 public abstract class Ticket {
 
+	private static final String DECIMAL_FORMAT = "###.##";
+	
 	private Double precoOriginal;
 	private DiaDaSemana diaDaSemana;
-
-	public DiaDaSemana getDiaDaSemana() {
-		return diaDaSemana;
-	}
 
 	public Ticket(Double precoOriginal, DiaDaSemana diaDaSemana) {
 		this.precoOriginal = precoOriginal;
@@ -20,11 +18,19 @@ public abstract class Ticket {
 		return precoOriginal;
 	}
 
+	public DiaDaSemana getDiaDaSemana() {
+		return diaDaSemana;
+	}
+
 	public Double getPreco() {
 		Double preco = this.precoOriginal;
 		Double percentualDesconto = this.getPercentualDesconto();
 		preco -= (preco * percentualDesconto);
-		DecimalFormat decimalFormat = new DecimalFormat("###.##");
+		return roundDecimal(preco);
+	}
+
+	private Double roundDecimal(Double preco) {
+		DecimalFormat decimalFormat = new DecimalFormat(DECIMAL_FORMAT);
 		String precoAsString = decimalFormat.format(preco);
 		return new Double(precoAsString);
 	}

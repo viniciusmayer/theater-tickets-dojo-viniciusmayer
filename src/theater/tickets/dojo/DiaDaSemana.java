@@ -21,6 +21,7 @@ public enum DiaDaSemana {
 		this.percentualDescontoCrianca = percentualDescontoCrianca;
 		this.percentualDescontoEstudante = percentualDescontoEstudante;
 		this.percentualDescontoIdoso = percentualDescontoIdoso;
+		this.percentualDescontoPadrao = percentualDescontoPadrao; 
 	}
 
 	public Double getPercentualDescontoCrianca() {
