@@ -10,49 +10,49 @@ import theater.tickets.dojo.Tipo;
 public class TicketEstudanteTest {
 
 	@Test
-	public void testDomingo() {
+	public void testPrecoDoTicketParaEstudanteNoDomingoDeveSerIgualA8Reais() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.DOMINGO);
 		Assert.assertTrue(ticket.getPreco().equals(8.0));
 	}
 
 	@Test
-	public void testSegunda() {
+	public void testPrecoDoTicketParaEstudanteNaSegundaDeveSerIgualA5ReaisE20Centavos() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.SEGUNDA);
 		Assert.assertTrue(ticket.getPreco().equals(5.2));
 	}
 
 	@Test
-	public void testTerca() {
+	public void testPrecoDoTicketParaEstudanteNaTercaDeveSerIgualA5ReaisE20Centavos() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.TERCA);
 		Assert.assertTrue(ticket.getPreco().equals(5.2));
 	}
 
 	@Test
-	public void testQuarta() {
+	public void testPrecoDoTicketParaEstudanteNaQuartaDeveSerIgualA5ReaisE20Centavos() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.QUARTA);
 		Assert.assertTrue(ticket.getPreco().equals(5.2));
 	}
 
 	@Test
-	public void testQuinta() {
+	public void testPrecoDoTicketParaEstudanteNaQuintaDeveSerIgualA5ReaisE20Centavos() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.QUINTA);
 		Assert.assertTrue(ticket.getPreco().equals(5.2));
 	}
 
 	@Test
-	public void testSexta() {
+	public void testPrecoDoTicketParaEstudanteNaSextaDeveSerIgualA5ReaisE20Centavos() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.SEXTA);
 		Assert.assertTrue(ticket.getPreco().equals(5.2));
 	}
 
 	@Test
-	public void testSabado() {
+	public void testPrecoDoTicketParaEstudanteNoSabadoDeveSerIgualA8Reais() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.SABADO);
 		Assert.assertTrue(ticket.getPreco().equals(8.0));
 	}
 
 	@Test
-	public void testFeriado() {
+	public void testPrecoDoTicketParaEstudanteEmFeriadosDeveSerIgualA8Reais() {
 		Ticket ticket = Tipo.ESTUDANTE.getTicket(DiaDaSemana.FERIADO);
 		Assert.assertTrue(ticket.getPreco().equals(8.0));
 	}

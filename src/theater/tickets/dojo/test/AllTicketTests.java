@@ -15,49 +15,49 @@ import theater.tickets.dojo.Tipo;
 public class AllTicketTests {
 
 	@Test
-	public void testDomingo() {
+	public void testPrecoDoTicketPadraoNoDomingoDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.DOMINGO);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
 
 	@Test
-	public void testSegunda() {
+	public void testPrecoDoTicketPadraoNaSegundaDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.SEGUNDA);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
 
 	@Test
-	public void testTerca() {
+	public void testPrecoDoTicketPadraoNaTercaDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.TERCA);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
 
 	@Test
-	public void testQuarta() {
+	public void testPrecoDoTicketPadraoNaQuartaDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.QUARTA);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
 
 	@Test
-	public void testQuinta() {
+	public void testPrecoDoTicketPadraoNaQuintaDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.QUINTA);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
 
 	@Test
-	public void testSexta() {
+	public void testPrecoDoTicketPadraoNaSextaDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.SEXTA);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
 
 	@Test
-	public void testSabado() {
+	public void testPrecoDoTicketPadraoNoSabadoDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.SABADO);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
 
 	@Test
-	public void testFeriado() {
+	public void testPrecoDoTicketPadraoEmFeriadosDeveSerIgualA10Reais() {
 		Ticket ticket = Tipo.PADRAO.getTicket(DiaDaSemana.FERIADO);
 		Assert.assertTrue(ticket.getPreco().equals(10.0));
 	}
